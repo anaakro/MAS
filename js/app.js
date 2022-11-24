@@ -241,8 +241,9 @@ function readFiles(files) {
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
-window.localStarage.setItem("Item", file);    
   };
+  window.localStarage.setItem("Item", file);    
+
 }
 
 async function writeFile() {
