@@ -263,3 +263,4 @@ async function writeFile() {
   await writer.close()
   
   target.innerHTML = 'Test content written to ' + file.name + '.';
+}
