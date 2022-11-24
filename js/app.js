@@ -175,5 +175,5 @@ function requestPersistence() {
         document.getElementById('persisted').innerHTML = persisted ? 'persisted' : 'not persisted';
       });
   }
-  
+}  
   
