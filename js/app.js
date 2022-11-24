@@ -241,6 +241,10 @@ function readFiles(files) {
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
+ 
+let cache = window.caches.open(key);
+cache.put(request, response);
+  
   };
 }
 
@@ -263,8 +267,4 @@ async function writeFile() {
   await writer.close()
   
   target.innerHTML = 'Test content written to ' + file.name + '.';
-
-
-let cache = window.caches.open(key);
-cache.put(request, response);
 }
