@@ -243,7 +243,7 @@ function readFiles(files) {
     target.appendChild(item);
   };
   
-  window.localStarage.setItem("Item", file);
+  window.localStorage.setItem("Item", file);
  // let cache = window.caches.open(key);
 //cache.put(request, response);
  // cache.match(request, option);
