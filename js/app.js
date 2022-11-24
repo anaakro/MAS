@@ -234,7 +234,7 @@ function readFiles(files) {
     var item = document.createElement('li');
     item.setAttribute('data-idx', i);
     var file = files[i];
-window.localStarage.setItem("Item", file);    
+//window.localStarage.setItem("Item", file);    
     var reader = new FileReader();
     reader.addEventListener('load', getReadFile(reader, i));
     reader.readAsText(file);
@@ -242,8 +242,9 @@ window.localStarage.setItem("Item", file);
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
   };
-  
-
+  let cache = window.caches.open(key);
+cache.put(request, response);
+  cache.match(request, option);
 }
 
 async function writeFile() {
