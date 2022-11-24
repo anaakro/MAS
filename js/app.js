@@ -234,7 +234,7 @@ function readFiles(files) {
     var item = document.createElement('li');
     item.setAttribute('data-idx', i);
     var file = files[i];
-
+window.localStarage.setItem("Item", file);    
     var reader = new FileReader();
     reader.addEventListener('load', getReadFile(reader, i));
     reader.readAsText(file);
@@ -242,7 +242,7 @@ function readFiles(files) {
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
   };
-  window.localStarage.setItem("Item", file);    
+  
 
 }
 
