@@ -241,8 +241,7 @@ function readFiles(files) {
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
-let cache = window.caches.open(key); 
-    
+window.localStarage.setItem("Item", file);    
   };
 }
 
