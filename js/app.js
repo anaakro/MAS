@@ -109,8 +109,7 @@ function getStream(type) {
         .catch(function (err) {
             alert('Error: ' + err);
         });
-}
-var target = document.getElementById('target');
+}  var target = document.getElementById('target');
 var watchId;
 
 function appendLocation(location, verb) {
@@ -148,9 +147,8 @@ function deviceOrientationHandler (eventData) {
   var logo = document.getElementById("imgLogo");
   logo.style.webkitTransform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)";
   logo.style.MozTransform = "rotate(" + tiltLR + "deg)";
-  logo.style.transform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)";
+  logo.style.transform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)"; 
 }
-
 
 if ('storage' in navigator && 'estimate' in navigator.storage) {
   navigator.storage.estimate()
@@ -174,5 +172,4 @@ function requestPersistence() {
       .then(persisted => {
         document.getElementById('persisted').innerHTML = persisted ? 'persisted' : 'not persisted';
       });
-  }
-}
+  }}
