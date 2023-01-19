@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const coffees = [
+/*const coffees = [
     {
         name: "Perspiciatis",
         image: "images/coffee1.jpg"
@@ -48,7 +48,7 @@ const showCoffees = () => {
                 <a class="card--link" href="#">Taste</a>
               </div>
               `)
-    );
+    ); */
     container.innerHTML = output;
 };
 
