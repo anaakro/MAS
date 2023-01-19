@@ -48,9 +48,9 @@ const showCoffees = () => {
                 <a class="card--link" href="#">Taste</a>
               </div>
               `)
-    ); */
+    ); };*/
     container.innerHTML = output;
-};
+
 
 document.addEventListener("DOMContentLoaded", showCoffees);
 
